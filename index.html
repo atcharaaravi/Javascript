@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <div id="slideshow" >
+        Slideshow Starts here !!!
+        <br >
+        <img id="slide" src="image1.jpg" alt="image1">
+    </div>
+    <h3>Live server testing</h3>
+    <p id="timer"></p>
+    <script>
+        var number = 8;
+        var name = "JS";
+        var array = ["chennai","Tamilnadu","India","world"];
+        console.log(number + name);
+        console.log(array.length);
+        console.log(array);
+        console.log(array.push("Universe"));
+        console.log(array);
+        console.log(array.splice(1,2));
+        console.log(array);
+        console.log(array.shift("Galaxy"));
+        console.log(array);
+        document.write("This is a Javascript");
+        console.log("Hello JS");
+        document.write("<br>"+Math.floor(Math.random()*10));
+        document.write("<br>"+Math.floor(Math.random()*49));
+        document.write("<br>"+Math.floor(Math.random()*1000));
+        document.write("<br>");
+        if(number >5){
+            document.write("Greater");
+        }
+        document.write("<br>");
+        for (let index = 0; index < array.length; index++) {
+            document.write(array[index]+"<br>");
+            
+        }
+        document.write("<br>");
+        var person = {
+            firstname : "Atcharaa",
+            lastname : "Ravi"
+        }
+        person.location="cts";
+        document.write("<table><tr><td>"+person.firstname+"</td><td>"+person.lastname+"</td><td>"+person.location+"</td></tr></table>");
+
+       
+
+        function myFunction1(){
+            document.write("Hi" );
+        }
+        myFunction2 = function(){
+            document.write("Hi");
+        }
+        myFunction1();
+        myFunction2;
+       
+        
+        //alert("Javascript");
+        //capture = prompt("JS");
+        //console.log(capture);
+        //alert(capture);
+
+        myFunction3 = function(){
+            document.write("<br>"+"Function 3");
+        }
+        myFunction4 = function(){
+            document.write("<br>"+"Function 4");
+        }
+        myFunction5= function(){
+            clearInterval(myTime,12000);
+        }
+        /*setTimeout(myFunction3,2000);
+        var myTime = setInterval(myFunction4,2000);
+        setTimeout(myFunction5,9000);*/
+
+        
+            function getTime(){
+                var present = new Date();
+                h=18;
+                m=26;
+                s=55;
+                hour = present.getHours();
+                minute = present.getMinutes();
+                second = present.getSeconds();
+                hours=h-hour;
+                if(minute>m){
+                    minutes=minutes-m;
+                }
+                else{
+                    minutes=m-minutes;
+                }
+                if(seconds>s){
+                    seconds=second-s;
+                }
+                else{
+                    seconds=s-second;
+                }
+                
+                var tposition = document.getElementById("timer");
+               // tposition.innerHTML = hours+":"+minutes+":"+seconds;
+                tposition.innerHTML = hour+":"+minute+":"+second;
+            }
+            setInterval(getTime, 2000);
+    </script>
+    <script src="slideshow.js" type="text/javascript">
+    function imgFunction(){
+    for (name1=1;name1<6;name1++){
+    pic="image"+name1+".jpg";
+    }
+    }
+    </script>
+</body>
+</html>
